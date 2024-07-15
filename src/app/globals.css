@@ -2,32 +2,297 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+.poppins{
+  font-family: "Poppins",sans-serif;
+}
+.inter{
+  font-family: "inter",sans-serif;
+}
+.nunito {
+  font-family: 'Nunito Sans', sans-serif;
+}
+.hides{
+  display: block;
+  z-index: -10000;
+}
+ /* login */
+.logins{
+  width: 100%;
+  height: 130vh;
+  position: relative;
+ }
+.subLogins{
+  padding-left: 110px;
+ }
+.login_p{
+font-size: 14px;
+font-weight: 500;
+line-height: 21px;
+text-align: left;
+width: 450px;
+height: 63px;
+margin-bottom: 30px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.login_head{
+  /* font-family: Poppins; */
+font-size: 24px;
+font-weight: 600;
+line-height: 36px;
+text-align: left;
+margin-bottom: 20px;
+}
+
+.login_navOption{
+border-radius: 10px;
+  width: 59px;
+  background: #fff;
+height: 36px;
+top: 41px;
+box-shadow: 0px 0px 4px 0px #5586FF;
+left: 569px;
+ 
+}
+
+form{
+  display: flex;
+   flex-direction: column;
+  align-items: start;
+}
+form label{
+  width: 341px;
+  padding-right: 20px;
+height:55px;
+background-color: #FFFFFF;
+border-radius: 30px;
+color: #7F7F7F;
+z-index: 10000;
+}
+form label input{
+  width: 100%;
+height:100%;
+outline: none;
+border: none;
+font-family: "Nunito Sans",sans-serif;
+font-size: 12px;
+font-weight: 600;
+/* line-height: 1.1px; */
+text-align: left;
+z-index: 10000;
+color: #7F7F7F;
+}
+
+form label input:focus{
+  outline: none;
+}
+.SignupBtn{
+   z-index: 100000;
+}
+.bottons{
+  width: 341px;
+height:59px;
+padding: 16px 32px 16px 32px;
+gap: 10px;
+border-radius: 30px;
+ cursor: pointer;
+ /* z-index: 100000; */
+}
+
+.boxshadowblue{
+  box-shadow: 0px 0px 4px 0px #5586FF;
+
+}
+.forgotpassndusertext{
+  margin-left: 150px;
+}
+.donthavecreatacct{
+  padding-left: 26px;
+  margin-top: 40px;
+  width: 256px;
+  height: 45px;
+  border-radius: 10px;
+  margin-left: 30px;
+ }
+ .abslute{
+  width: 90%;
+  background-image: url("/public/assest/9Milebanner.svg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+ }
+
+ /* signup */
+ .inputed-wrapper {
+   display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+}
+
+.inputed {
+   z-index: 10000;
+  padding-top: 10px; 
+  /* Adjust this value based on your design */
+}
+
+.inputed-wrapper::before {
+  content: attr(data-placeholder);
+  font-size: 10px;
+  color: #7F7F7F;
+  pointer-events: none;
+}
+
+ .subSignup{
+  padding-top: 100px;
+  padding-left: 288px;
+  /* position: relative; */
+ }
+ @media(max-width:1200px) {
+  .logins{
+    width: 100%;
+    height: 106vh;
+    position: relative;
+    /* w-full h/-screen */
+  }
+ }
+ @media(max-width:950px) {
+  .signups{
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+   margin-left: auto;
+   }
+   .subSignup{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* position: relative; */
+   }
+ }
+@media(max-width:750px) {
+  
+  .subLogins{
+    padding-left: 40px;
+    padding-right: 40px;
+   }
+   .forgotpassndusertext{
+    margin-left: 50px;
+    padding-top: 20px;
+   }
+   .hides{
+     display: none;
+  }
+  .logins{
+    width: 100%;
+    height: 106vh;
+    overflow: hidden;
+    position: relative;
+    /* w-full h/-screen */
+  }
+}
+@media(max-width:550px) {
+  .login_p{
+   font-size: 13px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  width: 350px;
+  height: 43px;
+  margin-bottom: 30px;
+  }
+  
+}
+
+
+@media(max-width:410px) {
+  .bottons{
+  width: 100%;
+  height:49px;
+  padding: 10px 22px 10px 22px;
+  gap: 10px;
+  border-radius: 30px;
+  }
+  
+  form label{
+    width: 100%;
+    padding-right: 0px;
+  height:52px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  color: #7F7F7F;
+  }
+  .login_p{
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  width: 100%;
+  height: 63px;
+  margin-bottom: 30px;
+  }
+  .subLogins{
+    padding-left: 20px;
+    padding-right: 20px;
+   }
+   form label input{
+    width: 100%;
+    margin-right: 30px;
+
+  }
+ 
+  .logins{
+    width: 100%;
+    height: 106vh;
+    overflow: hidden;
+    position: relative;
+  }
+  .inputed-wrapper {
+    display: flex;
+   width: 100%;
+   flex-direction: column;
+   align-items: start;
+ }
+ 
+ .inputed {
+    z-index: 10000;
+   padding-top: 0px; 
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@media(max-width:326px) {
+  .donthavecreatacct{
+  
+    margin-left: 10px;
+   }
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@media(max-width:317px) {
+  .donthavecreatacct{
+    padding-left: 16px;
+    width: 100%;
+    gap: 10px;
+ 
+    margin-left: 0px;
+    }
+    .login_p{
+      font-size: 10px;
+      width: 100%;
+      height: 63px;
+      margin-bottom: 40px;
+      }
+      .forgotpassndusertext{
+        margin-left: 20px;
+        padding-top: 20px;
+       }
 }
