@@ -78,8 +78,7 @@ border: none;
 font-family: "Nunito Sans",sans-serif;
 font-size: 12px;
 font-weight: 600;
-/* line-height: 1.1px; */
-text-align: left;
+ text-align: left;
 z-index: 10000;
 color: #7F7F7F;
 }
@@ -88,6 +87,7 @@ form label input:focus{
   outline: none;
 }
 .SignupBtn{
+  margin-top: 15px;
    z-index: 100000;
 }
 .bottons{

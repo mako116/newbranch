@@ -50,9 +50,7 @@ const LoginPage: React.FC = () => {
           Not registered on Internet Banking or 9 Mileon?<br />
           Click on register to get started
         </p>
-        {/* <span className='text-[#000000] font-[500] text-[14px] leading-[21px]'>
-          No account? <Link href="/signup" className='text-[#5586FF] font-[700] text-[14px] leading-[21px]'>Create an account</Link>
-        </span> */}
+        
         {/* form  */}
         <form onSubmit={handleSubmit} className='mt-[20px] flex flex-col'>
           {/* username */}
@@ -82,7 +80,7 @@ const LoginPage: React.FC = () => {
             />
             <EyeIcon className="h-6 w-6 pr-[7px]" onClick={togglePasswordVisibility} />
           </label>
-          <Link className='forgotpassndusertext text-[#5586FF] nunito font-[600] text-[12px] leading-[16.37px] pt-[10px] lg:pt-[20px]' href="/">
+          <Link className='forgotpassndusertext text-[#5586FF] nunito font-[600] text-[12px] leading-[16.37px] pt-[10px] lg:pt-[20px]' href="/forgottenemail">
             <span>Forgot Username or Password?</span>
           </Link>
           <div className="flex flex-col  mt-[20px] gap-[20px]">
