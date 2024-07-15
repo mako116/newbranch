@@ -23,7 +23,7 @@ const CreatePasswordPage: React.FC = () => {
   const router = useRouter();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    router.push('/otp');
+    router.push('/login');
   };
   return (
     <div className="bg-[#F4F4F4] logins">
