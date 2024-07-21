@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import phone from "../../../../public/assest/iPhonebanner.svg"
 import first from "@/../public/assest/first.svg"
 import sec from "@/../public/assest/second.svg"
 import { EyeIcon, LockClosedIcon, UserIcon } from '@heroicons/react/24/solid';
@@ -115,8 +116,18 @@ const LoginPage: React.FC = () => {
         alt=''
         />
      </div>
+     <div className="absolute bottom-0 right-0 ">
+         <Image
+        width={100}
+        height={50}
+        src={phone}
+        className='w-[500px] lg:w-[100%] '
+        alt=''
+        />
+     </div>
      </div>
       </div>
+      
     </div>
     
     </>

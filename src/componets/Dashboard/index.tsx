@@ -1,10 +1,10 @@
 import React from 'react'
-import { Homesection } from './homesection'
-
+import DashboardContent from './DashboardContent'
+ 
 export const index = () => {
   return (
     <>
-    <Homesection/>
+    <DashboardContent/>
     </>
   )
 }

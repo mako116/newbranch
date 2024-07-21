@@ -1,14 +1,13 @@
 import AuthGuard from "@/componets/Auth";
-import { Homesection } from "@/componets/Home/homesection";
-import { Navbar } from "@/componets/Navbar/Navbar";
-// import Layout from "./layout";
+import Dashboard from "@/componets/Dashboard/Dashboard";
+  import Navbar from "@/componets/Navbar/Navbar";
+ // import Layout from "./layout";
 
 export default function Home() {
   return (
     <AuthGuard>
     <main>
-      <Navbar />
-      <Homesection />
+       <Dashboard/>
     </main>
    </AuthGuard>
   );

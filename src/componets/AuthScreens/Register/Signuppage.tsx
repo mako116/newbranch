@@ -1,9 +1,8 @@
 'use client';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Loginnavbar } from '@/componets/AuthScreens/AuthNavbar/Loginpage';
-import { EnvelopeIcon } from '@heroicons/react/24/outline';
-import { ArrowRightIcon, UserIcon } from '@heroicons/react/24/solid';
+ import { EnvelopeIcon } from '@heroicons/react/24/outline';
+import {  UserIcon } from '@heroicons/react/24/solid';
 import { FaArrowRight } from 'react-icons/fa';
 import sec from "@/../public/assest/9Milebanner.svg"
 import Image from 'next/image';
