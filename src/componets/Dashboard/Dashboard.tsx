@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import DashboardContent from "./DashboardContent";
 import Navbar from "../Navbar/Navbar";
 import Sidebar from "./sidebar";
+import SidebarWithHeader from "./sidebar";
 import Loading from "../Loading/Loadingscreen";
  
 const Dashboard = () => {
@@ -24,13 +25,12 @@ const Dashboard = () => {
       {loading ? (
         <Loading />
       ) : (
-        <Flex>
-          <Sidebar />
-          <Box ml="250px" w="full" className="bg-[#F7F7F7] w-full ">
-            <Navbar />
+        <Box>
+          <SidebarWithHeader />
+          <Box className="bg-[#F7F7F7] h-screen ">
             <DashboardContent />
           </Box>
-        </Flex>
+        </Box>
       )}
     </>
   );
