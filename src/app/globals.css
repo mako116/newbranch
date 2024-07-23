@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 
-
+.textview{
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
 .poppins{
   font-family: "Poppins",sans-serif;
 }

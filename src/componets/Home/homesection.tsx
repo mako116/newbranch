@@ -1,9 +1,13 @@
-// components/Home/Homesection.tsx
+"use client"
+import SidebarWithHeader from "../Sidebar/Sidebar";
+
+import AccountAndRecents from "../BalanceSection/AccountAndRecents";
+
 export const Homesection = () => {
   return (
-    <section>
-      <h2>Welcome to our E-commerce Site</h2>
-      <p>Browse our products and enjoy your shopping!</p>
-    </section>
+    <main className="bg-[#F7F7F7] h-screen">
+      <SidebarWithHeader />
+      <AccountAndRecents />
+    </main>
   );
 };
