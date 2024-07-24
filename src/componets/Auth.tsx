@@ -7,12 +7,12 @@ const AuthGuard = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
   const pathname = usePathname();
 
-  useEffect(() => {
-    const isAuthenticated = localStorage.getItem('authenticated');
-    if (!isAuthenticated && pathname !== '/login') {
-      router.push('/login');
-    }
-  }, [pathname, router]);
+  // useEffect(() => {
+  //   const isAuthenticated = localStorage.getItem('authenticated');
+  //   if (!isAuthenticated && pathname !== '/login') {
+  //     router.push('/login');
+  //   }
+  // }, [pathname, router]);
 
   return <>{children}</>;
 };
