@@ -1,20 +1,22 @@
-// components/AuthGuard.tsx
-'use client';
-import { useEffect } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { ReactNode, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useAuth } from "../utils/hooks/useAuth"; // Update the import path as necessary
 
-const AuthGuard = ({ children }: { children: React.ReactNode }) => {
+interface ProtectedRouteProps {
+  children: ReactNode;
+}
+
+const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
+  const { user } = useAuth();
   const router = useRouter();
-  const pathname = usePathname();
 
-  // useEffect(() => {
-  //   const isAuthenticated = localStorage.getItem('authenticated');
-  //   if (!isAuthenticated && pathname !== '/login') {
-  //     router.push('/login');
-  //   }
-  // }, [pathname, router]);
+  useEffect(() => {
+    if (!user) {
+      router.push("/login"); // Redirect to login if not authenticated
+    }
+  }, [user, router]);
 
   return <>{children}</>;
 };
 
-export default AuthGuard;
+export default ProtectedRoute;
