@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import AuthGuard from "@/componets/Auth";
-import { Homesection } from "@/componets/Home/homesection";
-// import Layout from "./layout";
-=======
 "use client"
 
 import Dashboard from "@/componets/Dashboard/Dashboard";
@@ -11,7 +6,6 @@ import Dashboard from "@/componets/Dashboard/Dashboard";
   import ProtectedRoute from "@/componets/Auth";
 import { useEffect, useState } from "react";
  // import Layout from "./layout";
->>>>>>> 8ab1d59881b5f6684313698e17cd559c230069b1
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -25,11 +19,6 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
   return (
-<<<<<<< HEAD
-    <AuthGuard>
-      <Homesection />
-   </AuthGuard>
-=======
    <CookiesProvider>
       <AuthProvider>
         <ProtectedRoute>
@@ -37,6 +26,5 @@ export default function Home() {
         </ProtectedRoute>
       </AuthProvider>
    </CookiesProvider>
->>>>>>> 8ab1d59881b5f6684313698e17cd559c230069b1
   );
 }
