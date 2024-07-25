@@ -3,8 +3,6 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import phone from "../../../../public/assest/iPhonebanner.svg"
-import first from "@/../public/assest/first.svg"
-import sec from "@/../public/assest/second.svg"
 import { EyeIcon, LockClosedIcon, UserIcon } from '@heroicons/react/24/solid';
 import { Loginnavbar } from '@/componets/AuthScreens/AuthNavbar/Loginpage';
 import Image from 'next/image';
