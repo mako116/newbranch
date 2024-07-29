@@ -3,7 +3,7 @@ import axios from "axios";
 import { AuthResponse, TLogin, TRegister } from "../types/auth";
 import useCookie from "./useCookies";
 
-const API_URL = 'https://ninemileon-backend-7ip8.onrender.com';
+const API_URL = "https://ninemileon-backend-7ip8.onrender.com/api/v1/";
 
 const handleAxiosError = (err: any) => {
   if (err && err?.response && err.response?.data) {
