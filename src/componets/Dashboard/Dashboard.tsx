@@ -27,7 +27,7 @@ const Dashboard = () => {
       ) : (
         <Box>
           <SidebarWithHeader />
-          <Box className="bg-[#F7F7F7] h-screen ">
+          <Box className="bg-[#F7F7F7] h-[130vh]">
             <DashboardContent />
           </Box>
         </Box>

@@ -1,21 +1,19 @@
-// src/components/AuthScreens/Address/AddressPage.tsx
 "use client";
 
-import { HomeIcon } from '@heroicons/react/24/outline';
-import Image from 'next/image';
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { FiHome } from 'react-icons/fi';
 import { FaArrowRight } from 'react-icons/fa';
+import Image from 'next/image';
 import { Signupnavbar } from '../AuthNavbar/SignupPage';
 import sec from "@/../public/assest/9Milebanner.svg";
-import { FiHome } from 'react-icons/fi';
 
 const AddressPage: React.FC = () => {
   const [address, setAddress] = useState('');
   const [country, setCountry] = useState('');
   const [state, setState] = useState('');
   const [city, setCity] = useState('');
-  
+
   const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {

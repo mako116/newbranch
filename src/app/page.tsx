@@ -19,12 +19,12 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
   return (
-   <CookiesProvider>
-      <AuthProvider>
-        <ProtectedRoute>
+  //  <CookiesProvider>
+  //     <AuthProvider>
+  //       <ProtectedRoute>
           <Dashboard/>
-        </ProtectedRoute>
-      </AuthProvider>
-   </CookiesProvider>
+  //       </ProtectedRoute>
+  //     </AuthProvider>
+  //  </CookiesProvider>
   );
 }

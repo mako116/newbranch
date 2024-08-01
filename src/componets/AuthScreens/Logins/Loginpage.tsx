@@ -33,6 +33,7 @@ const LoginPage: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setError('An error occurred');
     handleLogin({ email: username, password });
   };
 
@@ -95,6 +96,7 @@ const LoginPage: React.FC = () => {
                 <span>Forgot Username or Password?</span>
               </Link>
               <div className="flex flex-col  mt-[20px] gap-[20px]">
+                <h2 className='text-[#f00] '>{error}</h2>
                 <button type="submit" className='bottons bg-[#5586FF] text-[#fff] poppins font-[600] text-[16px] lg:text-[18px] leading-[27px]'>Sign in</button>
                 <button type="button" className='bottons text-[#5586FF] poppins font-[600] text-[16px] lg:text-[18px] leading-[27px] boxshadowblue' onClick={handleRegisterClick}>Register</button>
               </div>
@@ -110,7 +112,7 @@ const LoginPage: React.FC = () => {
         <div className="">
           <Image
           width={100}
-          height={50}
+          height={50} 
           src={phone}
           className='h-[750px] w-[750px]'
           alt='9-mileon mobile'

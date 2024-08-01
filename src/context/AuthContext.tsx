@@ -1,3 +1,5 @@
+// src/contexts/AuthContext.tsx
+
 "use client";
 
 import { ReactNode, createContext, useEffect, useState } from "react";
@@ -18,11 +20,7 @@ export const AuthContext = createContext<TAuthContext>({
   setUser: () => {},
 });
 
-interface Props {
-  children: ReactNode;
-}
-
-export const AuthProvider: React.FC<AuthProviderProps> = ({ children }: Props) => {
+export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<AuthUser | null>(null);
   const { setCookie, getCookie, removeCookie } = useCookie();
 
@@ -40,7 +38,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }: Props) =
         }
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

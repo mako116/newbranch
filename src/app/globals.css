@@ -118,6 +118,20 @@ border-radius: 30px;
  /* z-index: 100000; */
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+
 .boxshadowblue{
   box-shadow: 0px 0px 4px 0px #5586FF;
 
@@ -141,6 +155,50 @@ border-radius: 30px;
   position: absolute;
   top: 0;
  }
+.pads{
+  padding: 20px, 25px, 20px, 25px;
+}
+ .buttons{
+  display: flex;
+  background: #5586FF;
+   width: 222px;
+  height:40px;
+  padding: 10px 24px 10px 16px;
+  gap: 8px;
+   
+ }
+ .boxCheckBox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  display: none;
+  
+  transition: transform 0.9s ease, opacity 0.9s ease;
+}
+
+.boxCheckBox:checked {
+  background-color: transparent;
+}
+
+.boxCheckBox:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
 
  /* signup */
  .inputed-wrapper {
@@ -168,7 +226,150 @@ border-radius: 30px;
   padding-left: 288px;
   /* position: relative; */
  }
+ .BillsOptions{
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-top: 30px;
+  padding-left: 80px;
+ }
+.dashboardmain{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-top: 130px;
+  padding-left: 80px;
+}
+.formmain{
+  max-width: 800px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin: auto;
+  /* margin-left: 150px; */
+   /* padding-left: 280px; */
+}
+.formsinput{
+  width: 523px;
+height:50px;
+padding: 15px 20px 15px 20px;
+gap: 385px;
+border-radius: 10px;
+}
+ .dashboardcontents{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-left: 50px;
+  
+  padding-right: 10px;
+  }
+  .guaranteecontents{
+    width: 100%;
+ 
+    padding-left: 250px;
+    
+    padding-right: 20px;
+  }
+  .recentTransfers{
+    width: 540px;
+    height: 100%;
+    padding: 25px;
+    border-radius: 30px;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .AdminRecentUserCardBodys {
+    height: 500px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 1);
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .AdminRecentUserActivtyScrolls {
+    height: 450px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll ;
+}
+.cardcolor{
+  background: linear-gradient(180deg, #1F1F3A 0%, #1D1D27 100%);
+  background-size: cover;
+  background-position: center;
+  width: 343px;
+  height: 202px;
+ }
+ .cardcolor2{
+  background: linear-gradient(180deg, #1F1F3A 0%, #1D1D27 100%);
+  background-size: cover;
+  background-position: center;
+  width: 343px;
+  height: 202px;
+ }
+  @media(max-width:1400px) {
+    
+    .recentTransfers{
+      width: 400px;
+      height: 100%;
+      padding: 25px;
+      border-radius: 30px;
+      background: #fff;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cardcolor{
+      background: linear-gradient(180deg, #1F1F3A 0%, #1D1D27 100%);
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 202px;
+     }
+     .formmain{
+      max-width: 800px;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      margin: auto;
+      /* margin-left: 150px; */
+       /* padding-top: 130px; */
+      margin-left: 280px;
+    }
+  }
  @media(max-width:1200px) {
+
+  .dashboardcontents{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-left: 80px;
+    padding-right: 10px;
+    }
+  .recentTransfers{
+    width: 300px;
+    height: 100%;
+    padding: 25px;
+    border-radius: 30px;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .logins{
     width: 100%;
     height: 116vh;
@@ -176,6 +377,47 @@ border-radius: 30px;
     /* w-full h/-screen */
   }
  }
+ @media(max-width:1109px) {
+  .dashboardcontents{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-left: 150px;
+    padding-right: 10px;
+    }
+  .recentTransfers{
+    width: 300px;
+    height: 100%;
+    padding: 25px;
+    border-radius: 30px;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width:1023px) {
+  .dashboardcontents{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-left: 150px;
+
+    padding-right: 10px;
+    }
+  .recentTransfers{
+    width: 500px;
+    height: 100%;
+    padding: 25px;
+    border-radius: 30px;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
  @media(max-width:950px) {
   .signups{
     width: 100%;
@@ -198,6 +440,16 @@ border-radius: 30px;
     padding-right: 10px;
     /* position: relative; */
    }
+   .dashboardcontents{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-left: 190px;
+
+    padding-right: 10px;
+    }
  }
  @media(max-width:1100px) {
   .hides{
@@ -209,6 +461,47 @@ border-radius: 30px;
   position: relative;
   /* w-full h/-screen */
 }
+ }
+
+ @media(max-width:767px) {
+  .dashboardcontents{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-left: 20px;
+
+    padding-right: 20px;
+    }
+    .recentTransfers{
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+      border-radius: 30px;
+      background: #fff;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .guaranteecontents{
+      width: 100%;
+   
+      padding-left: 20px;
+      
+      padding-right: 20px;
+    }
+    .formmain{
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      margin: auto;
+       padding-top: 130px;
+      margin-left: 0px;
+    }
  }
 @media(max-width:750px) {
   
@@ -296,6 +589,17 @@ border-radius: 30px;
     z-index: 10000;
    padding-top: 0px; 
   }
+  .cardcolor{
+      
+      height: 100%;
+     }
+     .guaranteecontents{
+      width: 100%;
+   
+      padding-left: 5px;
+      
+      padding-right: 5px;
+    }
 }
 
 @media(max-width:326px) {
