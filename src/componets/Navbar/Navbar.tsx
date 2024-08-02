@@ -1,35 +1,38 @@
 // src/components/Navbar.tsx
 import { Box, Flex, Text, IconButton, Badge } from "@chakra-ui/react";
 import { FaBell } from "react-icons/fa";
-
+import UKFlag from "../../../public/assest/flags/circle-flags_uk.svg"
+import NGFlag from "../../../public/assest/flags/nigeria.svg"
+import EEFlag from "../../../public/assest/flags/emojione_flag-for-estonia.svg"
+import { ChangeEvent, useState } from "react";
 const Navbar = () => {
+  const [selectedCountry, setSelectedCountry] = useState<string>('');
+  const countries = [
+    { code: 'GB', name: 'United Kingdom', flag: UKFlag, emoji: '🇬🇧' },
+    { code: 'NG', name: 'Nigeria', flag: NGFlag, emoji: '🇳🇬' },
+    { code: 'EE', name: 'Estonia', flag: EEFlag, emoji: '🇪🇪' },
+    // Add more countries as needed
+  ];
+
+  const handleCountryChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCountry(event.target.value);
+};
   return (
-    <Flex
-      as="nav"
-      w="full"
-      h="60px"
-       borderBottom="1px"
-      borderColor="gray.200"
-      align="center"
-      justify="space-between"
-      px={4}
-    >
-      <Text fontSize="lg" fontWeight="bold">
-        Dashboard
-      </Text>
-      <Flex align="center">
-        <Text mr={4}>User Name</Text>
-        <IconButton
-          aria-label="Notifications"
-          icon={
-            <Badge colorScheme="red" borderRadius="full" p={1}>
-              <FaBell />
-            </Badge>
-          }
-          variant="ghost"
-        />
-      </Flex>
-    </Flex>
+    <>
+     <div className='select_tog'>
+           <div className='selecting'>
+              <select className='p-[5px]  inter font-[500] text-[22px] leading-[56px] text-[#00000]' id="country" value={selectedCountry} onChange={handleCountryChange}>
+                {countries.map((country) => (
+                  <option key={country.code} value={country.code}>
+                    <div className=''> {country.emoji}</div>
+                  </option>
+                ))}
+              </select>
+            </div>
+            </div>
+    </>
+
+     
   );
 };
 

@@ -112,7 +112,7 @@ const LoginPage: React.FC = () => {
         <div className="">
           <Image
           width={100}
-          height={50}
+          height={50} 
           src={phone}
           className='h-[750px] w-[750px]'
           alt='9-mileon mobile'

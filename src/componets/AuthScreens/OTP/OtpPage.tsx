@@ -1,14 +1,16 @@
-// src/components/AuthScreens/OTP/OTPPage.tsx
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Signupnavbar } from '../AuthNavbar/SignupPage';
 import { FaArrowRight } from 'react-icons/fa';
- 
+
 const OTPPage: React.FC = () => {
   const [otp, setOtp] = useState<string[]>(new Array(6).fill(''));
+  const [isOtpSent, setIsOtpSent] = useState<boolean>(false);
   const router = useRouter();
+
+ 
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>, index: number) => {
     const value = e.target.value;
@@ -24,13 +26,10 @@ const OTPPage: React.FC = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const otpValue = otp.join('');
-    console.log('Entered OTP:', otpValue);
-
-    // Perform OTP verification logic here
-    router.push('/password');
+   router.push('/password');
+     
   };
 
   return (
@@ -39,7 +38,7 @@ const OTPPage: React.FC = () => {
       <div className="subSignup poppins">
         <span className='font-[500] text-[12px] leading-[18px] text-[#7F7F7F] mb-[20px] h-[18px]'>Step 4 of 5</span>
         <h1 className='font-[500] text-[24px] leading-[36px] text-center md:text-start text-[#000000] mb-[10px]'>Verify your account</h1>
-        <p className='font-[500] lg:px-[0px] px-[14px] text-center md:text-start text-[12px] leading-[18px] mb-[40px]'>Provide the information below to create your access internet banking profile</p>
+        <p className='font-[500] lg:px-[0px] px-[14px] text-center md:text-start text-[12px] leading-[18px] mb-[40px]'>Enter the OTP sent to your phone/email to complete the verification process</p>
         <form onSubmit={handleSubmit} className='mx-[10px]'>
           <div className="otpInputs flex justify-center space-x-[10px] mb-[20px]">
             {otp.map((digit, index) => (
@@ -47,7 +46,7 @@ const OTPPage: React.FC = () => {
                 key={index}
                 type="text"
                 maxLength={1}
-                className=" w-[55px]  md:w-[65px] h-[59px] md:h-[73px] rounded-[10px] text-center text-[24px] border-[0.5px] border-[#5586FF] outline-none"
+                className="w-[55px] md:w-[65px] h-[59px] md:h-[73px] rounded-[10px] text-center text-[24px] border-[0.5px] border-[#5586FF] outline-none"
                 value={digit}
                 onChange={(e) => handleChange(e, index)}
               />

@@ -31,10 +31,10 @@ export const useAuth = () => {
 
   const register = async (creds: TRegister) => {
     try {
-      const res = await axios.post(`${API_URL}auth/register`, creds);
+      const res = await axios.post(`${API_URL}/auth/register`, creds);
       if (res.data?.data && res.data.data?.token) addUser(res.data.data);
       return res.data as AuthResponse;
-    } catch (err) {
+    } catch (err) { 
       handleAxiosError(err);
     }
   };
